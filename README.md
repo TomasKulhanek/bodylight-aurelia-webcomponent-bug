@@ -23,6 +23,7 @@ However, to be forward compatible with webcomponents, it is very unconvenient to
 * bdlau-beakercontrol is rendered correctly (webcomponents (with fallback prefix bdlau- using other components)
 * bdl-beakercontrol is not rendered and throws
 
+```
 Uncaught TypeError: instruction is undefined
     applyInstructions aurelia-templating.js:2211
     create aurelia-templating.js:2471
@@ -57,3 +58,6 @@ Uncaught TypeError: instruction is undefined
     __webpack_require__ bodylight.bundle.js:20
     <anonymous> bodylight.bundle.js:84
     <anonymous> bodylight.bundle.js:87
+```
+
+Live preview with the problem at https://tomaskulhanek.github.io/bodylight-aurelia-webcomponent-bug/dist/
