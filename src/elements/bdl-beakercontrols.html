@@ -1,0 +1,8 @@
+<template bindable="bwidth,bwidthmin,bwidthmax,bheight,bheightmin,bheightmax,id,color">
+    <require from="./bdl-range.html"></require>
+    <require from="./bdl-beaker.html"></require>
+
+    <bdl-range id="${id}-ranges" min="${bwidthmin}" max="${bwidthmax}" default="${bwidth}" title="Width" value.two-way="mybwidth"></bdl-range>
+    <bdl-range id="${id}-rangev" min="${bheightmin}" max="${bheightmax}" default="${bheight}" title="Height" value.two-way="mybheight"></bdl-range>
+    <bdl-beaker id="${id}-beaker" bwidth.bind="mybwidth" bheight.bind="mybheight" width="400" height="400" color="${color}"></bdl-beaker>
+</template>

@@ -1,0 +1,149 @@
+{
+  "name": "@creative-connections/bodylight",
+  "description": "Web Components for Bodylight framework, Modelica simulators in browser",
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creative-connections/Bodylight.js-Components.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@traptitech/markdown-it-katex": "^3.3.0",
+    "aurelia-bootstrapper": "^2.3.2",
+    "aurelia-dynamic-html": "^0.3.1",
+    "aurelia-fetch-client": "^1.8.2",
+    "aurelia-i18n": "^3.1.1",
+    "aurelia-web-components": "^1.0.0-beta.3",
+    "chart.js": "^2.9.3",
+    "core-js": "^3.6.5",
+    "dygraphs": "^2.1.0",
+    "file-saver": "^2.0.2",
+    "font-awesome": "^4.7.0",
+    "gifffer": "^1.5.4",
+    "gulp-protractor": "^4.1.1",
+    "highlight.js": "^9.16.2",
+    "i18next-resource-store-loader": "^0.1.2",
+    "i18next-xhr-backend": "^3.2.2",
+    "libgif": "0.0.3",
+    "markdown-it": "^10.0.0",
+    "markdown-it-footnote": "^3.0.2",
+    "markdown-it-for-inline": "^0.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.5",
+    "app-settings-loader": "^1.0.6",
+    "aurelia-cli": "^1.3.1",
+    "aurelia-loader-nodejs": "^1.0.1",
+    "aurelia-pal-nodejs": "^1.2.0",
+    "aurelia-protractor-plugin": "^1.0.6",
+    "aurelia-testing": "^1.0.0",
+    "aurelia-tools": "^2.0.0",
+    "aurelia-webpack-plugin": "^3.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.5.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-istanbul": "^5.1.1",
+    "clean-webpack-plugin": "^1.0.1",
+    "compression-webpack-plugin": "^3.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^1.0.0",
+    "duplicate-package-checker-webpack-plugin": "^3.0.0",
+    "eslint": "^7.5.0",
+    "expose-loader": "^0.7.5",
+    "file-loader": "^2.0.0",
+    "gulp": "^4.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "jest": "^24.1.0",
+    "jest-cli": "^24.1.0",
+    "jest-transform-stub": "^2.0.0",
+    "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^0.4.3",
+    "minimatch": "^3.0.4",
+    "promise-polyfill": "^8.1.0",
+    "regenerator-runtime": "0.13.2",
+    "style-loader": "^0.23.1",
+    "through2": "^3.0.2",
+    "tree-kill": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^1.1.2",
+    "vinyl-fs": "^3.0.3",
+    "wait-on": "^3.2.0",
+    "webpack": "^4.44.1",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "build": "webpack --env.production --extractCss",
+    "start": "webpack-dev-server --extractCss",
+    "build:dev": "webpack --extractCss",
+    "analyze": "webpack --env.production --analyze",
+    "test": "au test",
+    "e2e": "au protractor",
+    "e2e:headless": "au protractor --start --headless"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^aurelia-binding$": "<rootDir>/node_modules/aurelia-binding"
+    },
+    "modulePaths": [
+      "<rootDir>/src",
+      "<rootDir>/node_modules"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.(css|less|sass|scss|styl|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-transform-stub",
+      "^.+\\.js$": "babel-jest"
+    },
+    "testRegex": "\\.spec\\.js$",
+    "setupFiles": [
+      "<rootDir>/test/jest-pretest.js"
+    ],
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!**/*.spec.js",
+      "!**/node_modules/**",
+      "!**/test/**"
+    ],
+    "coverageDirectory": "<rootDir>/test/coverage-jest",
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/creative-connections/Bodylight.js-Components/issues"
+  },
+  "homepage": "https://github.com/creative-connections/Bodylight.js-Components#readme",
+  "main": "dist/bodylight.bundle.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "keywords": [
+    "bodylight",
+    "modelica",
+    "simulation",
+    "browser"
+  ],
+  "author": "Tomas Kulhanek"
+}
