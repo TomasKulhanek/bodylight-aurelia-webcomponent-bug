@@ -17,7 +17,11 @@ export function configure(aurelia) {
     //registering components - they will keep prefix bdl-
     .globalResources(PLATFORM.moduleName('elements/bdl-range.html'))
     .globalResources(PLATFORM.moduleName('elements/bdl-beaker.html'))
-    .globalResources(PLATFORM.moduleName('elements/bdl-beakercontrols.html'));
+    .globalResources(PLATFORM.moduleName('elements/bdl-beakercontrols.html'))
+    //.globalResources(PLATFORM.moduleName('elements/bdl1-range.html'))
+    //.globalResources(PLATFORM.moduleName('elements/bdl1-beaker.html'))
+    .globalResources(PLATFORM.moduleName('elements/bdl1-beakercontrols.html'));
+
 
   aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');
   
